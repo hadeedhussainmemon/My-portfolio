@@ -310,10 +310,10 @@ body:not(.dark) button[aria-label="toggle theme"]:hover {
 
 /* Header improvements for light mode */
 body:not(.dark) header {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(30px);
+  border-bottom: 1px solid rgba(203, 213, 225, 0.6);
+  box-shadow: 0 4px 24px rgba(59, 130, 246, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 body:not(.dark) header a[href="#home"] {
@@ -325,9 +325,9 @@ body:not(.dark) header a[href="#home"] {
 
 /* Footer enhanced styling for light mode */
 body:not(.dark) footer {
-  background: linear-gradient(to bottom, rgba(248, 250, 252, 0.98), rgba(241, 245, 249, 0.99));
-  border-top: 1px solid rgba(226, 232, 240, 0.6);
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.03);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.99));
+  border-top: 1px solid rgba(203, 213, 225, 0.5);
+  box-shadow: 0 -4px 24px rgba(59, 130, 246, 0.06), 0 -2px 8px rgba(0, 0, 0, 0.02);
 }
 
 body:not(.dark) footer::before {
@@ -337,8 +337,8 @@ body:not(.dark) footer::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.03) 0%, transparent 50%),
-              radial-gradient(circle at 70% 50%, rgba(168, 85, 247, 0.03) 0%, transparent 50%);
+  background: radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 60%),
+              radial-gradient(circle at 70% 50%, rgba(168, 85, 247, 0.05) 0%, transparent 60%);
   pointer-events: none;
   z-index: 1;
 }

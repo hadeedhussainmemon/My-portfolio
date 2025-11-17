@@ -82,8 +82,8 @@ export default function Footer(){
 
             {/* Quick Links */}
             <div className="lg:col-span-3 text-center sm:text-left">
-              <h3 className="text-gray-900 dark:text-white font-bold text-lg mb-6 flex items-center gap-2 justify-center sm:justify-start">
-                <span className="w-1 h-6 bg-gradient-to-b from-blue-600 to-purple-600 rounded-full"></span>
+              <h3 className="text-slate-800 dark:text-white font-bold text-lg mb-6 flex items-center gap-2 justify-center sm:justify-start">
+                <span className="w-1 h-6 bg-gradient-to-b from-blue-600 to-purple-600 rounded-full shadow-sm"></span>
                 Quick Links
               </h3>
               <ul className="space-y-3">
@@ -91,9 +91,9 @@ export default function Footer(){
                   <li key={link.name}>
                     <a 
                       href={link.href} 
-                      className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-white transition-all duration-300 inline-flex items-center gap-2 group"
+                      className="text-slate-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-white transition-all duration-300 inline-flex items-center gap-2 group font-medium"
                     >
-                      <span className="w-0 h-0.5 bg-blue-600 dark:bg-blue-500 group-hover:w-4 transition-all duration-300"></span>
+                      <span className="w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 dark:bg-blue-500 group-hover:w-4 transition-all duration-300 rounded-full"></span>
                       {link.name}
                     </a>
                   </li>
@@ -103,25 +103,25 @@ export default function Footer(){
 
             {/* Contact Info */}
             <div className="lg:col-span-3 text-center sm:text-left">
-              <h3 className="text-gray-900 dark:text-white font-bold text-lg mb-6 flex items-center gap-2 justify-center sm:justify-start">
-                <span className="w-1 h-6 bg-gradient-to-b from-blue-600 to-purple-600 rounded-full"></span>
+              <h3 className="text-slate-800 dark:text-white font-bold text-lg mb-6 flex items-center gap-2 justify-center sm:justify-start">
+                <span className="w-1 h-6 bg-gradient-to-b from-blue-600 to-purple-600 rounded-full shadow-sm"></span>
                 Get In Touch
               </h3>
               <ul className="space-y-4">
-                <li className="flex items-start gap-3 text-gray-600 dark:text-gray-400 justify-center sm:justify-start">
-                  <span className="text-blue-600 dark:text-blue-400 mt-1">📧</span>
+                <li className="flex items-start gap-3 text-slate-600 dark:text-gray-400 justify-center sm:justify-start">
+                  <span className="text-blue-600 dark:text-blue-400 mt-1 text-xl">📧</span>
                   <div>
-                    <p className="text-xs text-gray-500 dark:text-gray-500 mb-1">Email</p>
-                    <a href="mailto:hadeedhussain@example.com" className="hover:text-blue-600 dark:hover:text-white transition-colors">
+                    <p className="text-xs text-slate-500 dark:text-gray-500 mb-1 font-semibold">Email</p>
+                    <a href="mailto:hadeedhussain@example.com" className="hover:text-blue-600 dark:hover:text-white transition-colors font-medium">
                       hadeedhussain@example.com
                     </a>
                   </div>
                 </li>
-                <li className="flex items-start gap-3 text-gray-600 dark:text-gray-400 justify-center sm:justify-start">
-                  <span className="text-blue-600 dark:text-blue-400 mt-1">📍</span>
+                <li className="flex items-start gap-3 text-slate-600 dark:text-gray-400 justify-center sm:justify-start">
+                  <span className="text-blue-600 dark:text-blue-400 mt-1 text-xl">📍</span>
                   <div>
-                    <p className="text-xs text-gray-500 dark:text-gray-500 mb-1">Location</p>
-                    <p>Karachi, Pakistan</p>
+                    <p className="text-xs text-slate-500 dark:text-gray-500 mb-1 font-semibold">Location</p>
+                    <p className="font-medium">Karachi, Pakistan</p>
                   </div>
                 </li>
               </ul>
@@ -129,8 +129,8 @@ export default function Footer(){
 
             {/* Social Media */}
             <div className="lg:col-span-2 text-center sm:text-left">
-              <h3 className="text-gray-900 dark:text-white font-bold text-lg mb-6 flex items-center gap-2 justify-center sm:justify-start">
-                <span className="w-1 h-6 bg-gradient-to-b from-blue-600 to-purple-600 rounded-full"></span>
+              <h3 className="text-slate-800 dark:text-white font-bold text-lg mb-6 flex items-center gap-2 justify-center sm:justify-start">
+                <span className="w-1 h-6 bg-gradient-to-b from-blue-600 to-purple-600 rounded-full shadow-sm"></span>
                 Follow Me
               </h3>
               <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
@@ -156,15 +156,15 @@ export default function Footer(){
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-300 dark:border-white/10 py-6">
+        <div className="border-t border-slate-300 dark:border-white/10 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-gray-600 dark:text-gray-400 text-sm text-center sm:text-left">
-              © {currentYear} <span className="text-gray-900 dark:text-white font-semibold">Hadeed Hussain</span>. All rights reserved.
+            <p className="text-slate-600 dark:text-gray-400 text-sm text-center sm:text-left">
+              © {currentYear} <span className="text-slate-800 dark:text-white font-bold">Hadeed Hussain</span>. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm">
-              <a href="#privacy" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-white transition-colors">Privacy Policy</a>
-              <span className="text-gray-400 dark:text-gray-600">•</span>
-              <a href="#terms" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-white transition-colors">Terms of Service</a>
+              <a href="#privacy" className="text-slate-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-white transition-colors font-medium">Privacy Policy</a>
+              <span className="text-slate-400 dark:text-gray-600">•</span>
+              <a href="#terms" className="text-slate-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-white transition-colors font-medium">Terms of Service</a>
             </div>
           </div>
         </div>
