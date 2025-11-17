@@ -5,14 +5,26 @@ export default function Header() {
   const [dark, setDark] = useState(() => {
     const saved = localStorage.getItem('theme')
     // Default to dark mode if no preference saved
-    return saved ? saved === 'dark' : true
+    if (saved) {
+      const isDark = saved === 'dark'
+      if (isDark) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+      return isDark
+    }
+    document.documentElement.classList.add('dark')
+    return true
   })
 
   useEffect(() => {
     if (dark) {
       document.documentElement.classList.add('dark')
+      document.body.classList.add('dark')
     } else {
       document.documentElement.classList.remove('dark')
+      document.body.classList.remove('dark')
     }
     localStorage.setItem('theme', dark ? 'dark' : 'light')
   }, [dark])
@@ -42,7 +54,7 @@ export default function Header() {
             <button 
               aria-label="toggle theme" 
               onClick={() => setDark(d => !d)} 
-              className="text-2xl hover:scale-110 transition-transform duration-300 hover:rotate-12"
+              className="w-10 h-10 rounded-full glass flex items-center justify-center text-xl hover:scale-110 transition-all duration-300 hover:rotate-12 hover:shadow-lg"
             >
               {dark ? '🌙' : '☀️'}
             </button>

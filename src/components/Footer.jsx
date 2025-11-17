@@ -52,8 +52,8 @@ export default function Footer(){
   return (
     <footer className="relative mt-20 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-800/50 to-slate-900/90 backdrop-blur-md"></div>
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-800/50 to-slate-900/90 dark:from-slate-800/50 dark:to-slate-900/90 backdrop-blur-md"></div>
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20 dark:opacity-20">
         <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-purple-500/30 rounded-full blur-3xl"></div>
       </div>
@@ -71,10 +71,10 @@ export default function Footer(){
                 </h2>
                 <div className="h-1 w-24 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-4"></div>
               </div>
-              <p className="text-gray-400 text-base mb-4 max-w-sm mx-auto sm:mx-0">
+              <p className="text-gray-600 dark:text-gray-400 text-base mb-4 max-w-sm mx-auto sm:mx-0">
                 Full Stack Web Developer crafting beautiful, responsive, and user-friendly digital experiences.
               </p>
-              <div className="flex items-center gap-2 text-sm text-gray-500 justify-center sm:justify-start">
+              <div className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-500 justify-center sm:justify-start">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                 <span>Available for freelance work</span>
               </div>
@@ -82,7 +82,7 @@ export default function Footer(){
 
             {/* Quick Links */}
             <div className="lg:col-span-3 text-center sm:text-left">
-              <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2 justify-center sm:justify-start">
+              <h3 className="text-gray-900 dark:text-white font-bold text-lg mb-6 flex items-center gap-2 justify-center sm:justify-start">
                 <span className="w-1 h-6 bg-gradient-to-b from-blue-600 to-purple-600 rounded-full"></span>
                 Quick Links
               </h3>
@@ -91,9 +91,9 @@ export default function Footer(){
                   <li key={link.name}>
                     <a 
                       href={link.href} 
-                      className="text-gray-400 hover:text-white transition-all duration-300 inline-flex items-center gap-2 group"
+                      className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-white transition-all duration-300 inline-flex items-center gap-2 group"
                     >
-                      <span className="w-0 h-0.5 bg-blue-500 group-hover:w-4 transition-all duration-300"></span>
+                      <span className="w-0 h-0.5 bg-blue-600 dark:bg-blue-500 group-hover:w-4 transition-all duration-300"></span>
                       {link.name}
                     </a>
                   </li>
@@ -103,24 +103,24 @@ export default function Footer(){
 
             {/* Contact Info */}
             <div className="lg:col-span-3 text-center sm:text-left">
-              <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2 justify-center sm:justify-start">
+              <h3 className="text-gray-900 dark:text-white font-bold text-lg mb-6 flex items-center gap-2 justify-center sm:justify-start">
                 <span className="w-1 h-6 bg-gradient-to-b from-blue-600 to-purple-600 rounded-full"></span>
                 Get In Touch
               </h3>
               <ul className="space-y-4">
-                <li className="flex items-start gap-3 text-gray-400 justify-center sm:justify-start">
-                  <span className="text-blue-400 mt-1">📧</span>
+                <li className="flex items-start gap-3 text-gray-600 dark:text-gray-400 justify-center sm:justify-start">
+                  <span className="text-blue-600 dark:text-blue-400 mt-1">📧</span>
                   <div>
-                    <p className="text-xs text-gray-500 mb-1">Email</p>
-                    <a href="mailto:hadeedhussain@example.com" className="hover:text-white transition-colors">
+                    <p className="text-xs text-gray-500 dark:text-gray-500 mb-1">Email</p>
+                    <a href="mailto:hadeedhussain@example.com" className="hover:text-blue-600 dark:hover:text-white transition-colors">
                       hadeedhussain@example.com
                     </a>
                   </div>
                 </li>
-                <li className="flex items-start gap-3 text-gray-400 justify-center sm:justify-start">
-                  <span className="text-blue-400 mt-1">📍</span>
+                <li className="flex items-start gap-3 text-gray-600 dark:text-gray-400 justify-center sm:justify-start">
+                  <span className="text-blue-600 dark:text-blue-400 mt-1">📍</span>
                   <div>
-                    <p className="text-xs text-gray-500 mb-1">Location</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-500 mb-1">Location</p>
                     <p>Karachi, Pakistan</p>
                   </div>
                 </li>
@@ -129,7 +129,7 @@ export default function Footer(){
 
             {/* Social Media */}
             <div className="lg:col-span-2 text-center sm:text-left">
-              <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2 justify-center sm:justify-start">
+              <h3 className="text-gray-900 dark:text-white font-bold text-lg mb-6 flex items-center gap-2 justify-center sm:justify-start">
                 <span className="w-1 h-6 bg-gradient-to-b from-blue-600 to-purple-600 rounded-full"></span>
                 Follow Me
               </h3>
@@ -156,15 +156,15 @@ export default function Footer(){
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 py-6">
+        <div className="border-t border-gray-300 dark:border-white/10 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-gray-400 text-sm text-center sm:text-left">
-              © {currentYear} <span className="text-white font-semibold">Hadeed Hussain</span>. All rights reserved.
+            <p className="text-gray-600 dark:text-gray-400 text-sm text-center sm:text-left">
+              © {currentYear} <span className="text-gray-900 dark:text-white font-semibold">Hadeed Hussain</span>. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm">
-              <a href="#privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-              <span className="text-gray-600">•</span>
-              <a href="#terms" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+              <a href="#privacy" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-white transition-colors">Privacy Policy</a>
+              <span className="text-gray-400 dark:text-gray-600">•</span>
+              <a href="#terms" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-white transition-colors">Terms of Service</a>
             </div>
           </div>
         </div>
