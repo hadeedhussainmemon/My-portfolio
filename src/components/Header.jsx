@@ -2,10 +2,18 @@ import React, { useState, useEffect } from 'react'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
-  const [dark, setDark] = useState(() => localStorage.getItem('theme') === 'dark')
+  const [dark, setDark] = useState(() => {
+    const saved = localStorage.getItem('theme')
+    // Default to dark mode if no preference saved
+    return saved ? saved === 'dark' : true
+  })
 
   useEffect(() => {
-    document.documentElement.classList.toggle('dark', dark)
+    if (dark) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
     localStorage.setItem('theme', dark ? 'dark' : 'light')
   }, [dark])
 
