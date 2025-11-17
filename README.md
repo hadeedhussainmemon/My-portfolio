@@ -45,6 +45,22 @@ Project data is defined in [`projectsData`](assets/projectData.js) and loaded dy
 2. Open `index.html` in your browser.
 3. All assets are local; no build step required.
 
+## Client app (React + Vite + Tailwind)
+
+This repository has been migrated to a React + Vite + Tailwind client located in `client/`.
+
+To run the app locally:
+
+```cmd
+cd client
+npm install
+npm run dev
+```
+
+The Vite dev server will start (usually at http://localhost:5173). Static assets (images and the CV) are served from `client/public/`.
+
+Important: legacy site files were backed up under `legacy/`. After you verify the React client works and all assets load, you can remove the original `assets/` and root `index.html` if you wish.
+
 ## Customization
 
 - **Add Projects:** Edit [`projectsData`](assets/projectData.js) to add or update projects.

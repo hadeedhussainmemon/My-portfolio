@@ -1,0 +1,20 @@
+{
+  "name": "my-portfolio-client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@tailwindcss/vite": "^4.1.14"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.4",
+    "tailwindcss": "^4.1.14",
+    "vite": "^7.1.7"
+  }
+}
