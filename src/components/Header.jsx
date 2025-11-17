@@ -30,10 +30,10 @@ export default function Header() {
               <a 
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-gray-300 hover:text-white text-sm font-medium transition-all duration-300 relative group"
+                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white text-sm font-medium transition-all duration-300 relative group"
               >
                 {item}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
           </nav>
@@ -47,7 +47,7 @@ export default function Header() {
               {dark ? '🌙' : '☀️'}
             </button>
             <button 
-              className="md:hidden text-white hover:text-blue-400 transition-colors text-2xl" 
+              className="md:hidden text-gray-700 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-2xl" 
               onClick={() => setIsOpen(v => !v)} 
               aria-label="open menu"
             >
@@ -64,7 +64,7 @@ export default function Header() {
                 <a 
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="text-gray-300 hover:text-white py-2 hover:pl-4 transition-all duration-300 border-l-2 border-transparent hover:border-blue-400"
+                  className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white py-2 hover:pl-4 transition-all duration-300 border-l-2 border-transparent hover:border-blue-600 dark:hover:border-blue-400"
                   onClick={() => setIsOpen(false)}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >

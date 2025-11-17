@@ -14,7 +14,7 @@ html {
 
 /* Light mode (default) */
 body {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 50%, #e0e7ff 100%);
   color: #1e293b;
   margin: 0;
   padding: 0;
@@ -29,6 +29,77 @@ body {
 .dark body {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   color: #f1f5f9;
+}
+
+/* Light mode specific styles */
+body:not(.dark) {
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 50%, #e0e7ff 100%);
+  color: #0f172a;
+}
+
+body:not(.dark) section {
+  color: #1e293b;
+}
+
+body:not(.dark) h1,
+body:not(.dark) h2,
+body:not(.dark) h3,
+body:not(.dark) h4 {
+  color: #0f172a;
+}
+
+body:not(.dark) .text-white {
+  color: #0f172a !important;
+}
+
+body:not(.dark) .text-gray-300 {
+  color: #475569 !important;
+}
+
+body:not(.dark) .text-gray-400 {
+  color: #64748b !important;
+}
+
+body:not(.dark) .text-gray-500 {
+  color: #94a3b8 !important;
+}
+
+body:not(.dark) .text-gray-600 {
+  color: #cbd5e1 !important;
+}
+
+body:not(.dark) .bg-slate-800\/50 {
+  background: rgba(248, 250, 252, 0.7) !important;
+  backdrop-filter: blur(10px);
+}
+
+body:not(.dark) .bg-slate-900\/50 {
+  background: rgba(241, 245, 249, 0.8) !important;
+  backdrop-filter: blur(10px);
+}
+
+body:not(.dark) .border-slate-700\/50 {
+  border-color: rgba(203, 213, 225, 0.5) !important;
+}
+
+body:not(.dark) .border-white\/10 {
+  border-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+body:not(.dark) .border-white\/20 {
+  border-color: rgba(15, 23, 42, 0.2) !important;
+}
+
+body:not(.dark) .shadow-blue-500\/20 {
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15) !important;
+}
+
+body:not(.dark) .hover\:shadow-blue-500\/50:hover {
+  box-shadow: 0 15px 40px rgba(59, 130, 246, 0.25) !important;
+}
+
+body:not(.dark) .hover\:shadow-2xl:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
 }
 
 /* Smooth animations */
@@ -124,9 +195,11 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-body:not(.dark *) .glass {
-  background: rgba(15, 23, 42, 0.05);
-  border: 1px solid rgba(15, 23, 42, 0.1);
+body:not(.dark) .glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(203, 213, 225, 0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 /* Gradient text */
@@ -145,4 +218,59 @@ body:not(.dark *) .glass {
 .card-hover:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.dark .card-hover:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+body:not(.dark) .card-hover:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Light mode button styles */
+body:not(.dark) .bg-gradient-to-r.from-blue-600 {
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+body:not(.dark) .bg-gradient-to-r.from-blue-600:hover {
+  box-shadow: 0 12px 35px rgba(59, 130, 246, 0.4);
+}
+
+/* Light mode background decorations */
+body:not(.dark) .bg-blue-500\/10 {
+  background: rgba(59, 130, 246, 0.08) !important;
+}
+
+body:not(.dark) .bg-purple-500\/10 {
+  background: rgba(168, 85, 247, 0.08) !important;
+}
+
+body:not(.dark) .bg-pink-500\/5 {
+  background: rgba(236, 72, 153, 0.05) !important;
+}
+
+body:not(.dark) .bg-blue-500\/20 {
+  background: rgba(59, 130, 246, 0.12) !important;
+}
+
+body:not(.dark) .bg-purple-500\/20 {
+  background: rgba(168, 85, 247, 0.12) !important;
+}
+
+/* Light mode text colors for better readability */
+body:not(.dark) .text-blue-400 {
+  color: #2563eb !important;
+}
+
+body:not(.dark) .text-purple-400 {
+  color: #7c3aed !important;
+}
+
+body:not(.dark) .text-pink-400 {
+  color: #db2777 !important;
+}
+
+body:not(.dark) .text-green-500 {
+  color: #22c55e !important;
 }
