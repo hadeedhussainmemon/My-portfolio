@@ -50,12 +50,12 @@ export default function Footer(){
   ]
 
   return (
-    <footer className="relative mt-20 overflow-hidden">
+    <footer className="relative mt-20 overflow-hidden bg-white/95 dark:bg-transparent">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-800/50 to-slate-900/90 dark:from-slate-800/50 dark:to-slate-900/90 backdrop-blur-md"></div>
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20 dark:opacity-20">
-        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-purple-500/30 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-50/80 to-slate-100/90 dark:from-slate-800/50 dark:to-slate-900/90 backdrop-blur-md"></div>
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10 dark:opacity-20">
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-blue-500/20 dark:bg-blue-500/30 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-purple-500/20 dark:bg-purple-500/30 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -140,11 +140,11 @@ export default function Footer(){
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`group relative w-12 h-12 glass rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-xl overflow-hidden`}
+                    className={`group relative w-12 h-12 glass rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-xl overflow-hidden border border-gray-200/50 dark:border-white/10`}
                     aria-label={social.name}
                   >
                     <div className={`absolute inset-0 bg-gradient-to-br ${social.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
-                    <span className="relative z-10 text-xl group-hover:scale-110 transition-transform duration-300">
+                    <span className="relative z-10 text-xl group-hover:scale-110 transition-transform duration-300 text-gray-700 dark:text-white group-hover:text-white">
                       {social.icon}
                     </span>
                   </a>
@@ -171,7 +171,7 @@ export default function Footer(){
       </div>
 
       {/* Decorative Bottom Border */}
-      <div className="h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600"></div>
+      <div className="h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 shadow-lg shadow-blue-500/20"></div>
     </footer>
   )
 }

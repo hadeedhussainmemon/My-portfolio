@@ -30,10 +30,10 @@ export default function Header() {
   }, [dark])
 
   return (
-    <header className="fixed top-0 left-0 w-full glass backdrop-blur-md z-50 py-4 shadow-lg animate-fadeIn">
+    <header className="fixed top-0 left-0 w-full glass backdrop-blur-md z-50 py-4 shadow-lg animate-fadeIn border-b border-gray-200/50 dark:border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <a href="#home" className="text-xl font-bold gradient-text hover:scale-105 transition-transform duration-300">
+          <a href="#home" className="text-xl font-bold gradient-text hover:scale-105 transition-transform duration-300 drop-shadow-sm">
             hadeed-hussain
           </a>
           
@@ -54,7 +54,7 @@ export default function Header() {
             <button 
               aria-label="toggle theme" 
               onClick={() => setDark(d => !d)} 
-              className="w-10 h-10 rounded-full glass flex items-center justify-center text-xl hover:scale-110 transition-all duration-300 hover:rotate-12 hover:shadow-lg"
+              className="w-10 h-10 rounded-full glass flex items-center justify-center text-xl hover:scale-110 transition-all duration-300 hover:rotate-12 hover:shadow-lg border border-gray-200/50 dark:border-white/10"
             >
               {dark ? '🌙' : '☀️'}
             </button>
