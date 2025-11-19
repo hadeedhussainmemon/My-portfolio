@@ -138,7 +138,10 @@ export default function Home() {
                   <div className="w-full h-full bg-gradient-to-br from-orange-600 via-red-600 to-pink-600 relative overflow-hidden">
                     <img 
                       src="/assets/imgs/Pro.png" 
-                      alt="Hadeed Hussain" 
+                      alt="Hadeed Hussain - Frontend Web Developer" 
+                      loading="eager"
+                      width="384"
+                      height="384"
                       className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 filter brightness-105" 
                     />
                   </div>

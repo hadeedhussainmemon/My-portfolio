@@ -9,7 +9,10 @@ export default function ProjectCard({project, index}){
       <div className="relative overflow-hidden">
         <img 
           src={project.image} 
-          alt={project.title} 
+          alt={`${project.title} - Project Screenshot`} 
+          loading="lazy"
+          width="400"
+          height="224"
           className="w-full h-48 sm:h-56 object-cover transition-transform duration-500 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
