@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Home() {
   return (
-    <section id="home" className="min-h-screen flex items-center pt-24 pb-12 sm:pt-32 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center pt-12 pb-12 sm:pt-16 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-48 sm:w-72 h-48 sm:h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>

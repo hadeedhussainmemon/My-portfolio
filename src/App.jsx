@@ -15,7 +15,7 @@ export default function App() {
     <>
       <ScrollProgress />
       <Header />
-      <main className="pt-20">
+      <main className="pt-16">
         <Home />
         <About />
         <Services />
