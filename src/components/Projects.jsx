@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { projectsData } from '../data/projectsData'
 import ProjectCard from './ProjectCard'
+import Skeleton from './Skeleton'
 
-export default function Projects(){
+export default function Projects({ isLoading }){
   const [isMobile, setIsMobile] = useState(false)
   
   useEffect(() => {
@@ -15,6 +16,25 @@ export default function Projects(){
   }, [])
 
   const itemsPerPage = isMobile ? 1 : 3
+
+  if (isLoading) {
+    return (
+      <section id="projects" className="py-12 bg-slate-800/50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+          <div className="text-center mb-12">
+            <Skeleton variant="text" className="w-24 h-4 mx-auto mb-4" />
+            <Skeleton variant="title" className="w-64 h-12 mx-auto" />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[...Array(itemsPerPage)].map((_, i) => (
+              <Skeleton key={i} variant="card" className="h-[432px]" />
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   const [page, setPage] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
   const totalPages = Math.ceil(projectsData.length / itemsPerPage)

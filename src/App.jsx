@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Home from './components/Home'
 import About from './components/About'
@@ -11,18 +11,28 @@ import Footer from './components/Footer'
 import ScrollProgress from './components/ScrollProgress'
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulated elite loading sequence
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <ScrollProgress />
       <Header />
       <main className="pt-16">
-        <Home />
-        <About />
-        <Services />
-        <Skills />
-        <Qualification />
-        <Projects />
-        <Contact />
+        <Home isLoading={isLoading} />
+        <About isLoading={isLoading} />
+        <Services isLoading={isLoading} />
+        <Skills isLoading={isLoading} />
+        <Qualification isLoading={isLoading} />
+        <Projects isLoading={isLoading} />
+        <Contact isLoading={isLoading} />
       </main>
       <Footer />
     </>

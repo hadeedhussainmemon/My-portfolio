@@ -1,4 +1,5 @@
 import React from 'react'
+import Skeleton from './Skeleton'
 
 const skills = [
   {
@@ -140,7 +141,23 @@ const skills = [
   }
 ]
 
-export default function Skills() {
+export default function Skills({ isLoading }) {
+  if (isLoading) {
+    return (
+      <section id="skills" className="py-12 bg-slate-800/50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 text-center">
+          <Skeleton variant="text" className="w-24 h-4 mx-auto mb-4" />
+          <Skeleton variant="title" className="w-64 h-12 mx-auto mb-12" />
+          <div className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            {[...Array(10)].map((_, i) => (
+              <Skeleton key={i} variant="card" className="h-40 sm:h-48 rounded-2xl" />
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="skills" className="min-h-screen flex items-center py-12 bg-slate-800/50 relative overflow-hidden">
       {/* Background decoration */}

@@ -7,6 +7,12 @@
   --color-dark-text: #f1f5f9;
 }
 
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 /* Modern CSS with animations */
 /* Elite Ultra-Minimalist Scrollbar */
 ::-webkit-scrollbar {

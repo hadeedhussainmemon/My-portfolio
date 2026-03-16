@@ -1,6 +1,33 @@
 import React from 'react'
+import Skeleton from './Skeleton'
 
-export default function Home() {
+export default function Home({ isLoading }) {
+  if (isLoading) {
+    return (
+      <section id="home" className="min-h-screen flex items-center pt-12 pb-12 sm:pt-16 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="order-2 lg:order-1 space-y-6">
+              <Skeleton variant="text" className="w-32 h-8" />
+              <div className="space-y-4">
+                <Skeleton variant="title" className="h-16 sm:h-24 w-full" />
+                <Skeleton variant="title" className="h-16 sm:h-24 w-2/3" />
+              </div>
+              <Skeleton variant="text" className="h-6 w-full max-w-lg" />
+              <div className="flex gap-4">
+                <Skeleton variant="text" className="h-14 w-40 rounded-xl" />
+                <Skeleton variant="text" className="h-14 w-40 rounded-xl" />
+              </div>
+            </div>
+            <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+              <Skeleton variant="hexagon" className="w-64 h-64 sm:w-80 sm:h-80 lg:w-[450px] lg:h-[450px]" />
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="home" className="min-h-screen flex items-center pt-12 pb-12 sm:pt-16 relative overflow-hidden">
       {/* Animated background elements */}
