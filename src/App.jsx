@@ -9,10 +9,12 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ScrollProgress from './components/ScrollProgress'
+import CustomCursor from './components/CustomCursor'
 
 export default function App() {
   return (
     <>
+      <CustomCursor />
       <ScrollProgress />
       <Header />
       <main className="pt-20">

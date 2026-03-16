@@ -38,6 +38,15 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
 }
+@media (min-width: 1024px) {
+  body {
+    cursor: none !important;
+  }
+  a, button, input, textarea, [role="button"] {
+    cursor: none !important;
+  }
+}
+
 body {
   background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 50%, #e0e7ff 100%);
   color: #1e293b;
