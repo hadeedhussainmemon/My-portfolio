@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://hadeedhussainmemon.vercel.app/sitemap.xml
