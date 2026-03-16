@@ -71,24 +71,63 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile nav */}
-      {isOpen && (
-        <div className="lg:hidden px-4 pb-6 pt-2 animate-fadeInUp border-t border-white/5 mt-2">
-          <nav className="flex flex-col gap-3">
+      {/* Mobile nav - Full Screen Overlay */}
+      <div 
+        className={`fixed inset-0 bg-slate-900/60 backdrop-blur-2xl lg:hidden transition-all duration-500 z-[100] ${
+          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        <div className="flex flex-col h-full">
+          <div className="flex justify-end p-6">
+            <button 
+              className="w-12 h-12 rounded-2xl glass flex items-center justify-center text-white text-3xl border border-white/10 active:scale-90 transition-all"
+              onClick={() => setIsOpen(false)}
+              aria-label="close menu"
+            >
+              ✕
+            </button>
+          </div>
+          
+          <nav className="flex flex-col items-center justify-center flex-1 gap-6 px-6">
             {['Home', 'About', 'Skills', 'Qualification', 'Projects', 'Contact'].map((item, index) => (
               <a 
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-slate-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white py-3 hover:pl-4 transition-all duration-300 border-l-2 border-transparent hover:border-blue-600 dark:hover:border-blue-400 font-bold glass rounded-xl px-4"
+                className={`text-3xl font-black text-white hover:text-blue-400 transition-all duration-300 transform ${
+                  isOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                }`}
                 onClick={() => setIsOpen(false)}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={{ 
+                  transitionDelay: `${index * 100}ms`,
+                  textShadow: '0 0 20px rgba(59, 130, 246, 0.3)'
+                }}
               >
+                <span className="text-blue-500 mr-2 text-xl font-mono">0{index + 1}.</span>
                 {item}
               </a>
             ))}
           </nav>
+
+          <div className="p-12 flex justify-center gap-6">
+            {/* Social Links in Mobile Menu */}
+            {[
+              { icon: 'github', href: 'https://github.com/hadeedhussainmemon' },
+              { icon: 'linkedin', href: 'https://www.linkedin.com/in/hadeedhussainmemon/' }
+            ].map((social, i) => (
+              <a 
+                key={i} 
+                href={social.href} 
+                target="_blank" 
+                rel="noreferrer"
+                className="w-12 h-12 rounded-xl glass flex items-center justify-center border border-white/10 active:scale-95 transition-all text-white"
+              >
+                <img src={`https://cdn.simpleicons.org/${social.icon}/white`} className="w-6 h-6" alt={social.icon} />
+              </a>
+            ))}
+          </div>
         </div>
-      )}
+      </div>
     </header>
+
   )
 }

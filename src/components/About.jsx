@@ -66,7 +66,7 @@ export default function About() {
                 ].map((item, idx) => (
                   <div 
                     key={idx}
-                    className="glass p-5 rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 hover:scale-[1.05] group cursor-default relative overflow-hidden"
+                    className="glass p-5 rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 hover:scale-[1.05] active:scale-95 group cursor-default relative overflow-hidden"
                   >
                     <div className={`absolute -right-4 -bottom-4 w-20 h-20 bg-${item.color}-500 opacity-0 group-hover:opacity-10 blur-2xl transition-opacity duration-500`}></div>
                     <div className="flex items-center gap-4">

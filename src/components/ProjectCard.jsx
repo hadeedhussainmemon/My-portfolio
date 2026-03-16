@@ -3,7 +3,7 @@ import React from 'react'
 export default function ProjectCard({project, index}){
   return (
     <div 
-      className="glass rounded-2xl overflow-hidden card-hover group animate-fadeInUp"
+      className="glass rounded-2xl overflow-hidden card-hover group animate-fadeInUp active:scale-[0.98] transition-all duration-300"
       style={{animationDelay: `${index * 0.1}s`}}
     >
       <div className="relative overflow-hidden group">
@@ -42,7 +42,7 @@ export default function ProjectCard({project, index}){
             href={project.url} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="inline-flex items-center gap-2 text-white text-sm font-black uppercase tracking-[0.15em] border-b-2 border-blue-600/50 hover:border-white transition-all pb-1 group-hover:gap-4"
+            className="inline-flex items-center gap-3 text-white text-sm font-black uppercase tracking-[0.15em] border-b-2 border-blue-600/50 hover:border-white transition-all pb-1 group-hover:gap-4 active:scale-95"
           >
             Explore Project
             <span className="text-blue-400 group-hover:translate-x-1 group-hover:text-white transition-all">→</span>

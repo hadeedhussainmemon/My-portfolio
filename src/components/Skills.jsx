@@ -164,7 +164,7 @@ export default function Skills() {
         </div>
         
         {/* Skills Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
           {skills.map((skill, index) => (
             <div 
               key={skill.name}
@@ -172,7 +172,7 @@ export default function Skills() {
               style={{animationDelay: `${index * 0.1}s`}}
             >
               {/* Hexagon-inspired container */}
-              <div className="relative bg-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border-2 border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
+              <div className="relative bg-slate-900/50 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border-2 border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-2xl hover:shadow-blue-500/20">
                 {/* Gradient overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600/0 to-purple-600/0 group-hover:from-blue-600/10 group-hover:to-purple-600/10 rounded-2xl transition-all duration-300"></div>
                 
