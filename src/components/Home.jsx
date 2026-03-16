@@ -86,7 +86,10 @@ export default function Home({ isLoading }) {
                         <img 
                           src="/assets/imgs/Pro.webp" 
                           alt="Hadeed Hussain" 
+                          width="450"
+                          height="450"
                           loading="eager"
+                          fetchpriority="high"
                           className="w-full h-full object-cover hover:scale-110 transition-all duration-1000 filter brightness-110 contrast-105" 
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent mix-blend-overlay"></div>

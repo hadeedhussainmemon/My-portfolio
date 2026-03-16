@@ -50,6 +50,8 @@ export default function About({ isLoading }) {
                 <img 
                   src="/assets/imgs/about.jpg" 
                   alt="Hadeed Hussain" 
+                  width="500"
+                  height="500"
                   loading="lazy"
                   className="relative w-full aspect-square object-cover shadow-2xl transition-transform duration-500 group-hover:scale-105" 
                 />
@@ -98,7 +100,7 @@ export default function About({ isLoading }) {
                         {item.icon}
                       </div>
                       <div>
-                        <h4 className="text-white font-black text-sm uppercase tracking-wider">{item.title}</h4>
+                        <h3 className="text-white font-black text-sm uppercase tracking-wider">{item.title}</h3>
                         <p className="text-gray-400 text-xs mt-0.5">{item.desc}</p>
                       </div>
                     </div>
@@ -108,9 +110,9 @@ export default function About({ isLoading }) {
 
               <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-6 relative overflow-hidden group">
                 <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <h4 className="text-white font-bold mb-3 flex items-center gap-2 relative z-10">
+                <h3 className="text-white font-bold mb-3 flex items-center gap-2 relative z-10">
                   <span className="text-blue-500 text-lg">💡</span> Professional Identity
-                </h4>
+                </h3>
                 <p className="text-sm text-gray-400 leading-relaxed italic relative z-10">
                   Hadeed Hussain is a distinguished <strong>MERN Stack Developer</strong>, <strong>Agency Co-founder</strong>, and <strong>BS Data Science Student</strong>. An alumnus of the <strong>University of Leeds</strong> and currently pursuing a degree at the <strong>Virtual University of Pakistan</strong>, he leads digital transformation at <strong>Technose Digital</strong>. His technical foundation is further strengthened by advanced certifications in Modern Web & App Development.
                 </p>

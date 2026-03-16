@@ -10,6 +10,8 @@ export default function ProjectCard({project, index}){
         <img 
           src={project.image} 
           alt={`${project.title} - Project Screenshot`} 
+          width="400"
+          height="300"
           loading="lazy"
           className="w-full h-52 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
         />
@@ -53,6 +55,7 @@ export default function ProjectCard({project, index}){
               href={project.githubUrl} 
               target="_blank" 
               rel="noopener noreferrer"
+              aria-label={`View source code for ${project.title}`}
               className="w-10 h-10 glass rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all active:scale-90"
               title="View Source Code"
             >
