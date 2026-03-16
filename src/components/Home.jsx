@@ -10,10 +10,14 @@ export default function Home({ isLoading }) {
             <div className="order-2 lg:order-1 space-y-6">
               <Skeleton variant="text" className="w-32 h-8" />
               <div className="space-y-4">
-                <Skeleton variant="title" className="h-16 sm:h-24 w-full" />
-                <Skeleton variant="title" className="h-16 sm:h-24 w-2/3" />
+                <Skeleton variant="title" className="h-16 sm:h-24 lg:h-32 w-full" />
+                <Skeleton variant="title" className="h-16 sm:h-24 lg:h-32 w-2/3" />
               </div>
               <Skeleton variant="text" className="h-6 w-full max-w-lg" />
+              <div className="grid grid-cols-2 gap-4 max-w-md">
+                <Skeleton variant="card" className="h-24 rounded-2xl" />
+                <Skeleton variant="card" className="h-24 rounded-2xl" />
+              </div>
               <div className="flex gap-4">
                 <Skeleton variant="text" className="h-14 w-40 rounded-xl" />
                 <Skeleton variant="text" className="h-14 w-40 rounded-xl" />
