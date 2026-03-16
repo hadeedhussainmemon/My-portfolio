@@ -93,11 +93,15 @@ export default function Qualification({ isLoading }) {
               >
                 <div className="flex items-start gap-4 md:gap-6">
                   {/* Timeline dot - desktop */}
-                  <div className={`hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full items-center justify-center z-10 ${
-                    qual.status === 'completed' 
-                      ? 'bg-gradient-to-br from-green-500 to-emerald-600 shadow-lg shadow-green-500/50' 
-                      : 'bg-gradient-to-br from-blue-500 to-purple-600 shadow-lg shadow-blue-500/50 animate-pulse'
-                  }`}>
+                  <div 
+                    className={`hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full items-center justify-center z-10 ${
+                      qual.status === 'completed' 
+                        ? 'bg-gradient-to-br from-green-500 to-emerald-600 shadow-lg shadow-green-500/50' 
+                        : 'bg-gradient-to-br from-blue-500 to-purple-600 shadow-lg shadow-blue-500/50 animate-pulse'
+                    }`}
+                    role="img"
+                    aria-label={`${qual.title} status`}
+                  >
                     <span className="text-2xl">{qual.icon}</span>
                   </div>
 

@@ -96,7 +96,11 @@ export default function About({ isLoading }) {
                   >
                     <div className={`absolute -right-4 -bottom-4 w-20 h-20 bg-${item.color}-500 opacity-0 group-hover:opacity-10 blur-2xl transition-opacity duration-500`}></div>
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                      <div 
+                        className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform"
+                        role="img"
+                        aria-label={item.title}
+                      >
                         {item.icon}
                       </div>
                       <div>

@@ -159,10 +159,11 @@ export default function Header() {
                 key={i} 
                 href={social.href} 
                 target="_blank" 
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="w-12 h-12 rounded-xl glass flex items-center justify-center border border-white/10 active:scale-95 transition-all text-white"
+                aria-label={social.icon}
               >
-                <img src={`https://cdn.simpleicons.org/${social.icon}/white`} className="w-6 h-6" alt={social.icon} />
+                <img src={`https://cdn.simpleicons.org/${social.icon}/white`} className="w-6 h-6" alt={`${social.icon} icon`} />
               </a>
             ))}
           </div>
