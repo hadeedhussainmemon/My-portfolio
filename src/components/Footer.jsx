@@ -112,8 +112,8 @@ export default function Footer(){
                   <span className="text-blue-600 dark:text-blue-400 mt-1 text-xl">📧</span>
                   <div>
                     <p className="text-xs text-slate-500 dark:text-gray-500 mb-1 font-semibold">Email</p>
-                    <a href="mailto:hadeedhussain@example.com" className="hover:text-blue-600 dark:hover:text-white transition-colors font-medium">
-                      hadeedhussain@example.com
+                    <a href="mailto:programmerhadeed@gmail.com" className="hover:text-blue-600 dark:hover:text-white transition-colors font-medium">
+                      programmerhadeed@gmail.com
                     </a>
                   </div>
                 </li>

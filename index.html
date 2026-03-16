@@ -44,7 +44,7 @@
   <meta name="twitter:title" content="Hadeed Hussain | MERN Stack Developer & Co-founder of Technose Digital" />
   <meta name="twitter:description"
     content="Portfolio of Hadeed Hussain, MERN Stack Developer and Co-founder of Technose Digital. Karachi-based specialist in React and modern digital solutions." />
-  <meta name="twitter:image" content="https://hadeedhussainmemon.vercel.app/assets/imgs/og-image.png" />
+  <meta name="twitter:image" content="https://hadeedhussainmemon.vercel.app/assets/imgs/og-image.webp" />
   <meta name="twitter:creator" content="@hadeedhussain" />
 
   <!-- Canonical URL -->
@@ -90,11 +90,21 @@
         "hasCredential": [
           {
             "@type": "EducationalOccupationalCredential",
-        "memberOf": {
-          "@type": "Organization",
-          "name": "Technose Digital",
-          "url": "https://www.technosedigital.com"
-        },
+            "name": "Modern Web & App Development Certification",
+            "credentialCategory": "Certification",
+            "recognizedBy": {
+              "@type": "Organization",
+              "name": "SMIT"
+            }
+          }
+        ],
+        "memberOf": [
+          {
+            "@type": "Organization",
+            "name": "Technose Digital",
+            "url": "https://www.technosedigital.com"
+          }
+        ],
         "worksFor": {
           "@type": "Organization",
           "name": "Technose Digital",
@@ -189,6 +199,13 @@
 </head>
 
 <body>
+  <noscript>
+    <div style="font-family: sans-serif; padding: 20px; text-align: center; background: #0f172a; color: white; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <h1 style="color: #3b82f6;">JavaScript Required</h1>
+      <p style="color: #94a3b8; max-width: 500px; margin-top: 10px;">This portfolio relies on modern web technologies and JavaScript to provide a premium experience. Please enable JavaScript in your browser settings to continue.</p>
+      <a href="/" style="margin-top: 20px; color: #3b82f6; text-decoration: none; font-weight: bold;">Reload Page</a>
+    </div>
+  </noscript>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>

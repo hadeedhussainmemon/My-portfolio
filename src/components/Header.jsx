@@ -17,6 +17,8 @@ export default function Header() {
     return true
   })
 
+  const [activeSection, setActiveSection] = useState('home')
+
   useEffect(() => {
     if (dark) {
       document.documentElement.classList.add('dark')
@@ -27,6 +29,31 @@ export default function Header() {
     }
     localStorage.setItem('theme', dark ? 'dark' : 'light')
   }, [dark])
+
+  useEffect(() => {
+    const sections = ['home', 'about', 'services', 'skills', 'qualification', 'projects', 'contact']
+    
+    const options = {
+      root: null,
+      rootMargin: '-50% 0px -50% 0px', // Trigger when section is in the middle of the viewport
+      threshold: 0
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id)
+        }
+      })
+    }, options)
+
+    sections.forEach(id => {
+      const element = document.getElementById(id)
+      if (element) observer.observe(element)
+    })
+
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <header className="fixed top-0 left-0 w-full glass backdrop-blur-xl z-50 py-3 sm:py-4 shadow-xl animate-fadeIn border-b border-white/5">
@@ -41,15 +68,23 @@ export default function Header() {
           </div>
           
           <nav className="hidden lg:flex items-center justify-center space-x-1 xl:space-x-4 bg-white/5 p-1 rounded-full border border-white/5">
-            {['Home', 'About', 'Skills', 'Qualification', 'Projects', 'Contact'].map((item) => (
-              <a 
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="px-4 py-2 text-slate-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white text-sm font-bold transition-all duration-300 rounded-full hover:bg-white/10"
-              >
-                {item}
-              </a>
-            ))}
+            {['Home', 'About', 'Services', 'Skills', 'Qualification', 'Projects', 'Contact'].map((item) => {
+              const id = item.toLowerCase()
+              const isActive = activeSection === id
+              return (
+                <a 
+                  key={item}
+                  href={`#${id}`}
+                  className={`px-4 py-2 text-sm font-bold transition-all duration-300 rounded-full ${
+                    isActive 
+                      ? 'text-blue-600 dark:text-white bg-blue-500/10 dark:bg-white/10 shadow-sm' 
+                      : 'text-slate-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white hover:bg-white/5'
+                  }`}
+                >
+                  {item}
+                </a>
+              )
+            })}
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-4">
@@ -89,23 +124,29 @@ export default function Header() {
           </div>
           
           <nav className="flex flex-col items-center justify-center flex-1 gap-6 px-6">
-            {['Home', 'About', 'Skills', 'Qualification', 'Projects', 'Contact'].map((item, index) => (
-              <a 
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className={`text-3xl font-black text-white hover:text-blue-400 transition-all duration-300 transform ${
-                  isOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-                }`}
-                onClick={() => setIsOpen(false)}
-                style={{ 
-                  transitionDelay: `${index * 100}ms`,
-                  textShadow: '0 0 20px rgba(59, 130, 246, 0.3)'
-                }}
-              >
-                <span className="text-blue-500 mr-2 text-xl font-mono">0{index + 1}.</span>
-                {item}
-              </a>
-            ))}
+            {['Home', 'About', 'Services', 'Skills', 'Qualification', 'Projects', 'Contact'].map((item, index) => {
+              const id = item.toLowerCase()
+              const isActive = activeSection === id
+              return (
+                <a 
+                  key={item}
+                  href={`#${id}`}
+                  className={`text-3xl font-black transition-all duration-300 transform ${
+                    isActive ? 'text-blue-400 scale-110' : 'text-white hover:text-blue-400'
+                  } ${
+                    isOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                  style={{ 
+                    transitionDelay: `${index * 100}ms`,
+                    textShadow: isActive ? '0 0 30px rgba(59, 130, 246, 0.6)' : '0 0 20px rgba(59, 130, 246, 0.3)'
+                  }}
+                >
+                  <span className={`${isActive ? 'text-white' : 'text-blue-500'} mr-2 text-xl font-mono`}>0{index + 1}.</span>
+                  {item}
+                </a>
+              )
+            })}
           </nav>
 
           <div className="p-12 flex justify-center gap-6">
