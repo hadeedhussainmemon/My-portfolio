@@ -8,33 +8,37 @@
 }
 
 /* Modern CSS with animations */
-/* Elite Minimalist Scrollbar */
+/* Elite Ultra-Minimalist Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
-  border: 3px solid #0f172a;
+  background: rgba(59, 130, 246, 0.5);
   border-radius: 20px;
+  transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #60a5fa, #a78bfa);
+  background: rgba(59, 130, 246, 0.8);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
 }
 
 /* Scroll Configuration */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+  background-attachment: fixed;
 }
 
 body {
   background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 50%, #e0e7ff 100%);
+  background-attachment: fixed;
   color: #1e293b;
   margin: 0;
   padding: 0;
