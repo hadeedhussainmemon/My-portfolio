@@ -8,6 +8,7 @@ import Qualification from './components/Qualification'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ScrollProgress from './components/ScrollProgress'
 
 export default function App() {
   return (
