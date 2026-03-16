@@ -60,7 +60,6 @@ export default function About() {
               {/* Premium Achievement Cards for AI & Visual Wow */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8">
                 {[
-                  { icon: '🏛️', title: 'Leeds Alumnus', desc: 'Engineering Project Mgt', color: 'purple' },
                   { icon: '🏢', title: 'Agency Founder', desc: 'Co-founder @ Technose', color: 'pink' },
                   { icon: '📊', title: 'Data Scientist', desc: 'VU Pakistan (2025-29)', color: 'green' },
                   { icon: '🎓', title: 'MERN Specialist', desc: 'Certified Professional', color: 'blue' }
@@ -123,25 +122,25 @@ export default function About() {
               <span className="px-4 py-2 glass rounded-full text-xs font-semibold text-gray-300 border border-white/10">UI/UX Design</span>
             </div>
             
-            {/* Action buttons */}
-            <div className="flex flex-wrap gap-4 pt-2">
+            {/* Elite Action buttons */}
+            <div className="flex flex-wrap gap-5 pt-8">
               <a 
-                className="group inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 font-bold" 
                 href="/cv/MyCV.pdf" 
                 download
+                className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-2xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-500 shadow-2xl hover:shadow-blue-500/25 font-black uppercase tracking-widest text-sm border border-white/10"
               >
-                Download CV
-                <svg className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                Resume
+                <svg className="w-5 h-5 group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </a>
               <a 
                 href="#contact" 
-                className="inline-flex items-center gap-2 glass px-6 py-3 rounded-full hover:bg-white/10 transition-all duration-300 font-bold border-2 border-white/20 hover:border-blue-500 shadow-lg hover:scale-105"
+                className="group inline-flex items-center gap-3 glass px-10 py-4 rounded-2xl hover:bg-white/10 transition-all duration-500 font-black uppercase tracking-widest text-sm border border-white/10 hover:border-blue-500/50 shadow-lg hover:scale-[1.02] active:scale-[0.98]"
               >
                 Let's Talk
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </a>
             </div>

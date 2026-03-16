@@ -33,7 +33,7 @@ const qualifications = [
     title: 'Modern Web & App Development',
     institution: 'SMIT',
     year: '2024-2025',
-    status: 'progress',
+    status: 'completed',
     description: 'Professional certification in MERN stack: HTML, CSS, JavaScript, TypeScript, React, Next.js, Node.js, MongoDB',
     icon: '💻'
   }

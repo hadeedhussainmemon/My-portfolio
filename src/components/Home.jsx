@@ -61,50 +61,50 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Stats */}
-            <div className="flex gap-6 pt-2">
-              <div>
-                <p className="text-2xl sm:text-3xl font-bold gradient-text">10+</p>
-                <p className="text-gray-400 text-xs sm:text-sm">Projects Done</p>
+            {/* Premium Stats Cards */}
+            <div className="grid grid-cols-2 gap-4 max-w-sm pt-4">
+              <div className="glass p-4 rounded-2xl border border-white/5 hover:border-blue-500/30 transition-all group">
+                <p className="text-3xl font-black gradient-text group-hover:scale-110 transition-transform origin-left">10+</p>
+                <p className="text-gray-400 text-xs uppercase tracking-widest font-bold">Projects Done</p>
               </div>
-              <div>
-                <p className="text-2xl sm:text-3xl font-bold gradient-text">99%</p>
-                <p className="text-gray-400 text-xs sm:text-sm">Client Satisfaction</p>
+              <div className="glass p-4 rounded-2xl border border-white/5 hover:border-purple-500/30 transition-all group">
+                <p className="text-3xl font-black gradient-text group-hover:scale-110 transition-transform origin-left">99%</p>
+                <p className="text-gray-400 text-xs uppercase tracking-widest font-bold">Client Success</p>
               </div>
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-wrap gap-4 pt-3">
+            {/* Elite Action Buttons */}
+            <div className="flex flex-wrap gap-5 pt-6">
               <a 
                 href="#contact" 
-                className="group inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 font-bold text-base"
+                className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-2xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-500 shadow-2xl hover:shadow-blue-500/25 font-black uppercase tracking-widest text-sm sm:text-base border border-white/10"
               >
                 Hire Me
-                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </a>
               <a 
                 href="/cv/MyCV.pdf" 
                 download
-                className="inline-flex items-center gap-2 glass px-6 py-3 rounded-full hover:bg-white/10 transition-all duration-300 font-bold text-base border-2 border-white/20 hover:border-blue-500 shadow-lg hover:scale-105"
+                className="group inline-flex items-center gap-3 glass px-10 py-4 rounded-2xl hover:bg-white/10 transition-all duration-500 font-black uppercase tracking-widest text-sm sm:text-base border border-white/10 hover:border-blue-500/50 shadow-lg hover:scale-[1.02] active:scale-[0.98]"
               >
-                Download CV
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                Resume
+                <svg className="w-5 h-5 group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </a>
             </div>
           </div>
 
           {/* Right Image - Modern Hexagon Design */}
-          <div className="flex flex-col items-center lg:items-end animate-slideInRight space-y-4">
-            <div className="relative">
+          <div className="flex flex-col items-center lg:items-end animate-slideInRight lg:scale-110 xl:scale-125 transition-transform">
+            <div className="relative group">
+              {/* Outer glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/30 via-purple-600/30 to-pink-600/30 rounded-full blur-[100px] group-hover:blur-[120px] transition-all duration-700 opacity-60"></div>
+              
               {/* Hexagon shape with image */}
-              <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
-                {/* Outer glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20 rounded-full blur-3xl"></div>
-                
+              <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[450px] lg:h-[450px]">
                 {/* Animated border with rotation */}
                 <div className="absolute inset-0 animate-float">
                   <svg viewBox="0 0 200 200" className="w-full h-full drop-shadow-2xl">
@@ -124,39 +124,39 @@ export default function Home() {
                       </filter>
                     </defs>
                     <polygon 
-                      points="100,8 180,48 180,142 100,182 20,142 20,48" 
+                      points="100,5 190,50 190,150 100,195 10,150 10,50" 
                       fill="none" 
                       stroke="url(#hexGradient)" 
-                      strokeWidth="5"
+                      strokeWidth="3.5"
                       filter="url(#glow)"
                       className="animate-pulse"
+                      style={{ opacity: 0.8 }}
                     />
                   </svg>
                 </div>
                 
                 {/* Inner hexagon border */}
-                <div className="absolute inset-6">
-                  <svg viewBox="0 0 200 200" className="w-full h-full opacity-40">
+                <div className="absolute inset-4 lg:inset-8">
+                  <svg viewBox="0 0 200 200" className="w-full h-full opacity-30">
                     <polygon 
-                      points="100,15 170,52 170,138 100,175 30,138 30,52" 
+                      points="100,10 185,52 185,148 100,190 15,148 15,52" 
                       fill="none" 
                       stroke="url(#hexGradient)" 
-                      strokeWidth="2"
+                      strokeWidth="1.5"
                     />
                   </svg>
                 </div>
                 
                 {/* Image container with clip-path */}
-                <div className="absolute inset-10 overflow-hidden" style={{clipPath: 'polygon(50% 2%, 92% 27%, 92% 73%, 50% 98%, 8% 73%, 8% 27%)'}}>
-                  <div className="w-full h-full bg-gradient-to-br from-orange-600 via-red-600 to-pink-600 relative overflow-hidden">
+                <div className="absolute inset-6 lg:inset-12 overflow-hidden shadow-2xl" style={{clipPath: 'polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%)'}}>
+                  <div className="w-full h-full bg-slate-900 relative">
                     <img 
                       src="/assets/imgs/Pro.webp" 
-                      alt="Hadeed Hussain - MERN Stack Web Developer & Co-founder of Technose Digital" 
+                      alt="Hadeed Hussain" 
                       loading="eager"
-                      width="384"
-                      height="384"
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 filter brightness-105" 
+                      className="w-full h-full object-cover hover:scale-110 transition-all duration-1000 filter brightness-110 contrast-105" 
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent mix-blend-overlay"></div>
                   </div>
                 </div>
               </div>
