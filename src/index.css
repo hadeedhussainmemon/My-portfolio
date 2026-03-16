@@ -8,43 +8,29 @@
 }
 
 /* Modern CSS with animations */
-/* Elite Thin-Line Scrollbar */
-html, body {
-  scrollbar-width: thin !important;
-  scrollbar-color: #3b82f6 transparent !important;
-}
-
+/* Elite Minimalist Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px !important;
-  height: 6px !important;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent !important;
+  background: #0f172a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%) !important;
-  border-radius: 100px !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+  border: 3px solid #0f172a;
+  border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%) !important;
+  background: linear-gradient(to bottom, #60a5fa, #a78bfa);
 }
 
 /* Scroll Configuration */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
-}
-@media (min-width: 1024px) {
-  body {
-    cursor: none !important;
-  }
-  a, button, input, textarea, [role="button"] {
-    cursor: none !important;
-  }
 }
 
 body {
