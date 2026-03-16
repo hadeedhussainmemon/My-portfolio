@@ -145,32 +145,6 @@ export default function About() {
               </a>
             </div>
 
-            {/* FAQ Section for Rich Search results */}
-            <div className="pt-8 border-t border-white/10 mt-8">
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <span className="text-blue-400">❓</span> Frequently Asked Questions
-              </h3>
-              <div className="space-y-4">
-                <details className="group glass p-4 rounded-xl cursor-pointer hover:bg-white/5 transition-all">
-                  <summary className="font-bold text-gray-200 list-none flex justify-between items-center group-open:text-blue-400">
-                    What services does Technose Digital offer?
-                    <span className="transition-transform group-open:rotate-180">▼</span>
-                  </summary>
-                  <p className="mt-3 text-sm text-gray-400 leading-relaxed">
-                    Technose Digital is a full-service digital agency offering everything from <strong>Web & App Development</strong> (MERN stack, React, Node.js) to <strong>Digital Branding, SEO, and UI/UX Design</strong>. We provide end-to-end digital solutions for businesses.
-                  </p>
-                </details>
-                <details className="group glass p-4 rounded-xl cursor-pointer hover:bg-white/5 transition-all">
-                  <summary className="font-bold text-gray-200 list-none flex justify-between items-center group-open:text-blue-400">
-                    Why choose Hadeed Hussain for MERN stack projects?
-                    <span className="transition-transform group-open:rotate-180">▼</span>
-                  </summary>
-                  <p className="mt-3 text-sm text-gray-400 leading-relaxed">
-                    With expertise in the <strong>MongoDB, Express.js, React, and Node.js (MERN)</strong> stack, I build scalable, high-performance, and secure web applications. My dual role as a developer and agency co-founder ensures a professional and result-oriented approach.
-                  </p>
-                </details>
-              </div>
-            </div>
           </div>
         </div>
       </div>
