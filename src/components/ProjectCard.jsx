@@ -6,38 +6,48 @@ export default function ProjectCard({project, index}){
       className="glass rounded-2xl overflow-hidden card-hover group animate-fadeInUp"
       style={{animationDelay: `${index * 0.1}s`}}
     >
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden group">
         <img 
           src={project.image} 
           alt={`${project.title} - Project Screenshot`} 
           loading="lazy"
-          width="400"
-          height="224"
-          className="w-full h-48 sm:h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-52 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500"></div>
+        
+        {/* Hover overlay badge */}
+        <div className="absolute top-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+           <div className="bg-blue-600/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-black uppercase text-white tracking-widest">
+             Case Study
+           </div>
+        </div>
       </div>
       
-      <div className="p-6 space-y-4">
-        <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-blue-400 transition-colors line-clamp-2">
-          {project.title}
-        </h3>
+      <div className="p-7 space-y-4 relative z-10 bg-slate-900/40 backdrop-blur-sm border-t border-white/5">
+        <div className="space-y-2">
+            <h3 className="text-xl sm:text-2xl font-black text-white group-hover:text-blue-400 transition-colors line-clamp-1">
+              {project.title}
+            </h3>
+            <div className="h-1 w-8 bg-blue-600 rounded-full group-hover:w-16 transition-all duration-500"></div>
+        </div>
         
         {project.description && (
-          <p className="text-sm sm:text-base text-gray-300 line-clamp-2">
+          <p className="text-sm text-gray-400 leading-relaxed line-clamp-2 font-medium">
             {project.description}
           </p>
         )}
         
-        <a 
-          href={project.url} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-sm font-medium group-hover:gap-3"
-        >
-          View Project
-          <span className="transition-transform group-hover:translate-x-1">↗</span>
-        </a>
+        <div className="pt-2">
+          <a 
+            href={project.url} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="inline-flex items-center gap-2 text-white text-sm font-black uppercase tracking-[0.15em] border-b-2 border-blue-600/50 hover:border-white transition-all pb-1 group-hover:gap-4"
+          >
+            Explore Project
+            <span className="text-blue-400 group-hover:translate-x-1 group-hover:text-white transition-all">→</span>
+          </a>
+        </div>
       </div>
     </div>
   )

@@ -3,11 +3,20 @@ import React from 'react'
 const qualifications = [
   {
     type: 'education',
+    title: 'BS Data Science',
+    institution: 'Virtual University of Pakistan',
+    year: '2025-2029',
+    status: 'progress',
+    description: 'Currently pursuing Bachelor of Science in Data Science, focusing on analytical foundations and AI.',
+    icon: '📊'
+  },
+  {
+    type: 'education',
     title: 'Matric',
     institution: 'EGSS',
     year: '2022',
     status: 'completed',
-    description: 'Scored 77% | Foundation in Science and Mathematics',
+    description: 'Scored A | Foundation in Science and Mathematics',
     icon: '🎓'
   },
   {
@@ -15,7 +24,7 @@ const qualifications = [
     title: 'Intermediate',
     institution: 'GDBC Johar',
     year: '2024-2025',
-    status: 'progress',
+    status: 'completed',
     description: 'Pre-Engineering | Currently pursuing higher secondary education',
     icon: '📚'
   },
@@ -25,7 +34,7 @@ const qualifications = [
     institution: 'SMIT',
     year: '2024-2025',
     status: 'progress',
-    description: 'Comprehensive training in HTML, CSS, JavaScript, TypeScript, React, Next.js, Node.js, MongoDB',
+    description: 'Professional certification in MERN stack: HTML, CSS, JavaScript, TypeScript, React, Next.js, Node.js, MongoDB',
     icon: '💻'
   }
 ]

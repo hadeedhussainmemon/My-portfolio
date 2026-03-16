@@ -26,6 +26,7 @@ export default function About() {
                 <img 
                   src="/assets/imgs/about.jpg" 
                   alt="Hadeed Hussain" 
+                  loading="lazy"
                   className="relative w-full aspect-square object-cover shadow-2xl transition-transform duration-500 group-hover:scale-105" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
@@ -50,10 +51,50 @@ export default function About() {
             {/* Description */}
             <div className="space-y-4">
               <p className="text-gray-300 text-base leading-relaxed">
-                I'm a <span className="text-white font-semibold">creative web developer</span> who transforms ideas into exceptional digital experiences. With a passion for clean code and elegant design, I specialize in building modern, responsive web applications.
+                I'm a <span className="text-white font-semibold">creative MERN stack developer</span> who transforms ideas into exceptional digital experiences. With a passion for clean code and elegant design, I specialize in building modern, responsive web applications.
               </p>
               <p className="text-gray-300 text-base leading-relaxed">
-                Currently studying <span className="text-blue-400 font-semibold">Modern Web & App Development</span> at <strong className="text-white">SMIT</strong>, I combine technical expertise with a problem-solving mindset to deliver innovative solutions.
+                As the <span className="text-blue-400 font-semibold">Co-founder of <a href="https://www.technosedigital.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 underline underline-offset-4 decoration-blue-500/50 transition-colors">Technose Digital</a></span>, I lead a team of talented professionals delivering comprehensive digital services. We specialize in everything from web development to digital branding, helping businesses thrive in the modern era.
+              </p>
+              
+              {/* Premium Achievement Cards for AI & Visual Wow */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8">
+                {[
+                  { icon: '🏛️', title: 'Leeds Alumnus', desc: 'Engineering Project Mgt', color: 'purple' },
+                  { icon: '🏢', title: 'Agency Founder', desc: 'Co-founder @ Technose', color: 'pink' },
+                  { icon: '📊', title: 'Data Scientist', desc: 'VU Pakistan (2025-29)', color: 'green' },
+                  { icon: '🎓', title: 'MERN Specialist', desc: 'Certified Professional', color: 'blue' }
+                ].map((item, idx) => (
+                  <div 
+                    key={idx}
+                    className="glass p-5 rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 hover:scale-[1.05] group cursor-default relative overflow-hidden"
+                  >
+                    <div className={`absolute -right-4 -bottom-4 w-20 h-20 bg-${item.color}-500 opacity-0 group-hover:opacity-10 blur-2xl transition-opacity duration-500`}></div>
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                        {item.icon}
+                      </div>
+                      <div>
+                        <h4 className="text-white font-black text-sm uppercase tracking-wider">{item.title}</h4>
+                        <p className="text-gray-400 text-xs mt-0.5">{item.desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-6 relative overflow-hidden group">
+                <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <h4 className="text-white font-bold mb-3 flex items-center gap-2 relative z-10">
+                  <span className="text-blue-500 text-lg">💡</span> Professional Identity
+                </h4>
+                <p className="text-sm text-gray-400 leading-relaxed italic relative z-10">
+                  Hadeed Hussain is a distinguished <strong>MERN Stack Developer</strong>, <strong>Agency Co-founder</strong>, and <strong>BS Data Science Student</strong>. An alumnus of the <strong>University of Leeds</strong> and currently pursuing a degree at the <strong>Virtual University of Pakistan</strong>, he leads digital transformation at <strong>Technose Digital</strong>. His technical foundation is further strengthened by advanced certifications in Modern Web & App Development.
+                </p>
+              </div>
+
+              <p className="text-gray-300 text-base leading-relaxed">
+                With a focus on <span className="text-blue-400 font-semibold">High-Scale Web Architecture</span>, I combine academic rigorousness with a MERN stack-focused mindset to deliver innovative solutions for global clients.
               </p>
             </div>
 
@@ -103,6 +144,33 @@ export default function About() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </a>
+            </div>
+
+            {/* FAQ Section for Rich Search results */}
+            <div className="pt-8 border-t border-white/10 mt-8">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <span className="text-blue-400">❓</span> Frequently Asked Questions
+              </h3>
+              <div className="space-y-4">
+                <details className="group glass p-4 rounded-xl cursor-pointer hover:bg-white/5 transition-all">
+                  <summary className="font-bold text-gray-200 list-none flex justify-between items-center group-open:text-blue-400">
+                    What services does Technose Digital offer?
+                    <span className="transition-transform group-open:rotate-180">▼</span>
+                  </summary>
+                  <p className="mt-3 text-sm text-gray-400 leading-relaxed">
+                    Technose Digital is a full-service digital agency offering everything from <strong>Web & App Development</strong> (MERN stack, React, Node.js) to <strong>Digital Branding, SEO, and UI/UX Design</strong>. We provide end-to-end digital solutions for businesses.
+                  </p>
+                </details>
+                <details className="group glass p-4 rounded-xl cursor-pointer hover:bg-white/5 transition-all">
+                  <summary className="font-bold text-gray-200 list-none flex justify-between items-center group-open:text-blue-400">
+                    Why choose Hadeed Hussain for MERN stack projects?
+                    <span className="transition-transform group-open:rotate-180">▼</span>
+                  </summary>
+                  <p className="mt-3 text-sm text-gray-400 leading-relaxed">
+                    With expertise in the <strong>MongoDB, Express.js, React, and Node.js (MERN)</strong> stack, I build scalable, high-performance, and secure web applications. My dual role as a developer and agency co-founder ensures a professional and result-oriented approach.
+                  </p>
+                </details>
+              </div>
             </div>
           </div>
         </div>

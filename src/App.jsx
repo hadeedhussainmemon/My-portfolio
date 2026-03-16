@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './components/Header'
 import Home from './components/Home'
 import About from './components/About'
+import Services from './components/Services'
 import Skills from './components/Skills'
 import Qualification from './components/Qualification'
 import Projects from './components/Projects'
@@ -11,10 +12,12 @@ import Footer from './components/Footer'
 export default function App() {
   return (
     <>
+      <ScrollProgress />
       <Header />
       <main className="pt-20">
         <Home />
         <About />
+        <Services />
         <Skills />
         <Qualification />
         <Projects />

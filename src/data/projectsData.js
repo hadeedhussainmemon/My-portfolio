@@ -10,7 +10,7 @@ export const projectsData = [
     description:
       "Complete e-commerce store frontend and backend with product listings,security and admin dashboard.",
     url: "https://www.coolcache.app",
-    image: "/assets/imgs/projects/coolcache.jpg",
+    image: "/assets/imgs/projects/coolcache.webp",
   },
   {
     title: "H.H Foods",
@@ -53,7 +53,7 @@ export const projectsData = [
     title: "Login/SignUp Page",
     description: "Frontend UI for user login and registration.",
     url: "https://js-assignments-theta.vercel.app/Assignment_25/",
-    image: "/assets/imgs/projects/login.jpg",
+    image: "/assets/imgs/projects/login.webp",
   },
   {
     title: "Analog Clock",

@@ -72,7 +72,7 @@ export default function Footer(){
                 <div className="h-1 w-24 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-4"></div>
               </div>
               <p className="text-gray-600 dark:text-gray-400 text-base mb-4 max-w-sm mx-auto sm:mx-0">
-                Full Stack Web Developer crafting beautiful, responsive, and user-friendly digital experiences.
+                MERN Stack Web Developer & Co-founder of <a href="https://www.technosedigital.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 font-bold hover:underline transition-all">Technose Digital</a>. Crafting beautiful, responsive, and user-friendly digital experiences.
               </p>
               <div className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-500 justify-center sm:justify-start">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
