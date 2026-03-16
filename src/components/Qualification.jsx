@@ -1,4 +1,5 @@
 import React from 'react'
+import Skeleton from './Skeleton'
 
 const qualifications = [
   {
@@ -39,7 +40,23 @@ const qualifications = [
   }
 ]
 
-export default function Qualification() {
+export default function Qualification({ isLoading }) {
+  if (isLoading) {
+    return (
+      <section id="qualification" className="py-12 bg-slate-800/50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 text-center">
+          <Skeleton variant="text" className="w-32 h-4 mx-auto mb-4" />
+          <Skeleton variant="title" className="w-80 h-16 mx-auto mb-16" />
+          <div className="max-w-4xl mx-auto space-y-12">
+            {[...Array(4)].map((_, i) => (
+              <Skeleton key={i} variant="card" className="h-40 rounded-2xl" />
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="qualification" className="min-h-screen flex items-center py-12 relative overflow-hidden">
       {/* Background decoration */}

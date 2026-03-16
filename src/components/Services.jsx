@@ -1,4 +1,5 @@
 import React from 'react'
+import Skeleton from './Skeleton'
 
 const services = [
   {
@@ -31,7 +32,23 @@ const services = [
   }
 ]
 
-export default function Services() {
+export default function Services({ isLoading }) {
+  if (isLoading) {
+    return (
+      <section id="services" className="py-16 bg-slate-900/50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 text-center">
+          <Skeleton variant="text" className="w-32 h-4 mx-auto mb-4" />
+          <Skeleton variant="title" className="w-80 h-16 mx-auto mb-16" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[...Array(4)].map((_, i) => (
+              <Skeleton key={i} variant="card" className="h-64 rounded-[2rem]" />
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="services" className="min-h-screen flex items-center py-16 relative overflow-hidden">
       {/* Decorative Background */}

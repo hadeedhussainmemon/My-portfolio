@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import Skeleton from './Skeleton'
 
-export default function Contact() {
+export default function Contact({ isLoading }) {
   const [isSubmitted, setIsSubmitted] = useState(false)
 
   const handleSubmit = (e) => {
@@ -8,6 +9,27 @@ export default function Contact() {
     setTimeout(() => {
       setIsSubmitted(false)
     }, 5000)
+  }
+
+  if (isLoading) {
+    return (
+      <section id="contact" className="py-12 bg-slate-900/50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 text-center">
+          <Skeleton variant="text" className="w-32 h-4 mx-auto mb-4" />
+          <Skeleton variant="title" className="w-80 h-16 mx-auto mb-16" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="space-y-6">
+              <Skeleton variant="card" className="h-32 rounded-[2rem]" />
+              <Skeleton variant="card" className="h-32 rounded-[2rem]" />
+              <Skeleton variant="card" className="h-32 rounded-[2rem]" />
+            </div>
+            <div>
+              <Skeleton variant="card" className="h-[500px] rounded-[2.5rem]" />
+            </div>
+          </div>
+        </div>
+      </section>
+    );
   }
 
   return (

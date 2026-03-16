@@ -5,6 +5,8 @@ import Skeleton from './Skeleton'
 
 export default function Projects({ isLoading }){
   const [isMobile, setIsMobile] = useState(false)
+  const [page, setPage] = useState(0)
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true)
   
   useEffect(() => {
     const checkMobile = () => {
@@ -16,6 +18,36 @@ export default function Projects({ isLoading }){
   }, [])
 
   const itemsPerPage = isMobile ? 1 : 3
+  const totalPages = Math.ceil(projectsData.length / itemsPerPage)
+
+  const start = page * itemsPerPage
+  const visible = projectsData.slice(start, start + itemsPerPage)
+
+  // Auto-scroll functionality
+  useEffect(() => {
+    if (!isAutoPlaying || isLoading) return
+
+    const interval = setInterval(() => {
+      setPage((prevPage) => (prevPage + 1) % totalPages)
+    }, 5000) // Change slide every 5 seconds
+
+    return () => clearInterval(interval)
+  }, [isAutoPlaying, totalPages, isLoading])
+
+  const handlePageChange = (newPage) => {
+    setPage(newPage)
+    setIsAutoPlaying(false)
+    // Resume auto-play after 10 seconds of user interaction
+    setTimeout(() => setIsAutoPlaying(true), 10000)
+  }
+
+  const nextPage = () => {
+    handlePageChange((page + 1) % totalPages)
+  }
+
+  const prevPage = () => {
+    handlePageChange((page - 1 + totalPages) % totalPages)
+  }
 
   if (isLoading) {
     return (
@@ -33,39 +65,6 @@ export default function Projects({ isLoading }){
         </div>
       </section>
     );
-  }
-
-  const [page, setPage] = useState(0)
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true)
-  const totalPages = Math.ceil(projectsData.length / itemsPerPage)
-
-  const start = page * itemsPerPage
-  const visible = projectsData.slice(start, start + itemsPerPage)
-
-  // Auto-scroll functionality
-  useEffect(() => {
-    if (!isAutoPlaying) return
-
-    const interval = setInterval(() => {
-      setPage((prevPage) => (prevPage + 1) % totalPages)
-    }, 5000) // Change slide every 5 seconds
-
-    return () => clearInterval(interval)
-  }, [isAutoPlaying, totalPages])
-
-  const handlePageChange = (newPage) => {
-    setPage(newPage)
-    setIsAutoPlaying(false)
-    // Resume auto-play after 10 seconds of user interaction
-    setTimeout(() => setIsAutoPlaying(true), 10000)
-  }
-
-  const nextPage = () => {
-    handlePageChange((page + 1) % totalPages)
-  }
-
-  const prevPage = () => {
-    handlePageChange((page - 1 + totalPages) % totalPages)
   }
 
   return (

@@ -1,6 +1,30 @@
 import React from 'react'
+import Skeleton from './Skeleton'
 
-export default function About() {
+export default function About({ isLoading }) {
+  if (isLoading) {
+    return (
+      <section id="about" className="py-12 bg-slate-800/50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+            <div className="lg:col-span-2">
+              <Skeleton variant="card" className="aspect-square rounded-3xl" />
+            </div>
+            <div className="lg:col-span-3 space-y-6">
+              <Skeleton variant="text" className="w-24 h-4" />
+              <Skeleton variant="title" className="w-64 h-12" />
+              <Skeleton variant="text" className="w-full h-24" />
+              <div className="grid grid-cols-2 gap-4">
+                <Skeleton variant="card" className="h-24" />
+                <Skeleton variant="card" className="h-24" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="about" className="min-h-screen flex items-center py-12 relative overflow-hidden">
       {/* Decorative background elements */}
