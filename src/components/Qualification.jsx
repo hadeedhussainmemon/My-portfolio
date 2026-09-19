@@ -55,14 +55,14 @@ export default function Qualification({ isLoading }) {
                     <span className="text-[10px] font-bold text-emerald-700 uppercase tracking-widest bg-emerald-50 px-2 py-1">
                       {qual.year}
                     </span>
-                    <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">
+                    <span className="text-[10px] font-bold text-zinc-600 uppercase tracking-widest">
                       {qual.status}
                     </span>
                   </div>
                   <h3 className="text-sm font-bold text-zinc-900 uppercase tracking-widest leading-tight mb-2">
                     {qual.title}
                   </h3>
-                  <p className="text-xs text-zinc-500 font-medium uppercase tracking-widest">
+                  <p className="text-xs text-zinc-600 font-medium uppercase tracking-widest">
                     {qual.institution}
                   </p>
                 </div>

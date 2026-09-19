@@ -40,7 +40,7 @@ export default function Skills({ isLoading }) {
                   <div className="flex-1 h-[1px] bg-zinc-200 relative">
                     <div className="absolute left-0 top-0 h-[2px] -mt-[0.5px] bg-emerald-700 transition-all duration-1000 ease-out" style={{ width: inView ? skill.pct : '0%' }}></div>
                   </div>
-                  <span className="text-[10px] font-bold text-zinc-500">{skill.pct}</span>
+                  <span className="text-[10px] font-bold text-zinc-600">{skill.pct}</span>
                 </div>
               ))}
             </div>
@@ -58,19 +58,19 @@ export default function Skills({ isLoading }) {
                   {inView ? <CountUp start={0} end={1} duration={2} /> : "0"}.
                   {inView ? <CountUp start={0} end={5} duration={2.5} /> : "0"}+
                 </span>
-                <span className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest">Years of<br/>Experience</span>
+                <span className="text-[9px] font-bold text-zinc-600 uppercase tracking-widest">Years of<br/>Experience</span>
               </div>
               <div className="flex flex-col border-r border-zinc-200 pr-4">
                 <span className="font-display text-4xl sm:text-5xl text-zinc-900 tracking-tight leading-none mb-2">
                   {inView ? <CountUp start={0} end={10} duration={2.5} /> : "0"}+
                 </span>
-                <span className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest">Projects<br/>Completed</span>
+                <span className="text-[9px] font-bold text-zinc-600 uppercase tracking-widest">Projects<br/>Completed</span>
               </div>
               <div className="flex flex-col">
                 <span className="font-display text-4xl sm:text-5xl text-zinc-900 tracking-tight leading-none mb-2">
                   {inView ? <CountUp start={0} end={10} duration={2.5} /> : "0"}+
                 </span>
-                <span className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest">Happy<br/>Clients</span>
+                <span className="text-[9px] font-bold text-zinc-600 uppercase tracking-widest">Happy<br/>Clients</span>
               </div>
             </div>
 

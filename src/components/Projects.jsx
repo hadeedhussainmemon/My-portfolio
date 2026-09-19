@@ -89,7 +89,7 @@ export default function Projects({ isLoading }){
                       <h3 className="text-xs font-bold text-zinc-900 uppercase tracking-widest leading-tight group-hover:text-emerald-700 transition-colors">
                         {project.shortTitle}
                       </h3>
-                      <span className="text-[10px] text-zinc-500 font-medium mt-0.5">
+                      <span className="text-[10px] text-zinc-600 font-medium mt-0.5">
                         {project.title}
                       </span>
                     </div>
@@ -99,7 +99,9 @@ export default function Projects({ isLoading }){
                   <div className="relative w-full aspect-video bg-zinc-200 overflow-hidden group-hover:opacity-100 transition-opacity border border-zinc-200">
                     <img 
                       src={project.image} 
-                      alt={`Screenshot of ${project.title}`} 
+                      alt={project.title} 
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 transform transition-all duration-700 group-hover:scale-105" 
                     />
                     <div className="absolute inset-0 bg-emerald-900/0 group-hover:bg-emerald-900/20 transition-colors duration-500 flex items-center justify-center">
@@ -164,14 +166,14 @@ export default function Projects({ isLoading }){
 
                 <div className="space-y-8">
                   <div className="bg-zinc-50 border border-zinc-200 p-6">
-                    <h4 className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest mb-4">Project Details</h4>
+                    <h4 className="text-[10px] font-bold text-zinc-600 uppercase tracking-widest mb-4">Project Details</h4>
                     <div className="space-y-4">
                       <div>
-                        <span className="block text-[9px] font-bold text-zinc-500 uppercase tracking-widest mb-1">Role</span>
+                        <span className="block text-[9px] font-bold text-zinc-600 uppercase tracking-widest mb-1">Role</span>
                         <span className="text-xs font-bold text-zinc-900">{selectedProject.role}</span>
                       </div>
                       <div>
-                        <span className="block text-[9px] font-bold text-zinc-500 uppercase tracking-widest mb-2">Tech Stack</span>
+                        <span className="block text-[9px] font-bold text-zinc-600 uppercase tracking-widest mb-2">Tech Stack</span>
                         <div className="flex flex-wrap gap-2">
                           {selectedProject.stack.map(tech => (
                             <span key={tech} className="bg-white border border-zinc-200 px-3 py-1 text-[9px] font-bold text-zinc-600 uppercase tracking-widest">{tech}</span>

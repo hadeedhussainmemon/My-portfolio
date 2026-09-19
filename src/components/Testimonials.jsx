@@ -43,7 +43,7 @@ export default function Testimonials({ isLoading }) {
                 <div>
                   <div className="w-8 h-[2px] bg-emerald-700 mb-4"></div>
                   <span className="block text-xs font-bold text-zinc-900 uppercase tracking-widest">{test.author}</span>
-                  <span className="block text-[10px] text-zinc-500 font-bold uppercase tracking-widest mt-1">{test.project}</span>
+                  <span className="block text-[10px] text-zinc-600 font-bold uppercase tracking-widest mt-1">{test.project}</span>
                 </div>
               </div>
             ))}

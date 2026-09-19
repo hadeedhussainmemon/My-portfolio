@@ -47,6 +47,11 @@ export default function Home({ isLoading }) {
               <img 
                 src="/assets/imgs/Pro.webp" 
                 alt="Hadeed Hussain" 
+                width="400"
+                height="500"
+                fetchPriority="high"
+                loading="eager"
+                decoding="sync"
                 className="w-full h-full object-cover object-top grayscale contrast-[1.1] brightness-[1.05]" 
               />
             </div>

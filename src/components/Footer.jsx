@@ -42,7 +42,7 @@ export default function Footer() {
 
           {/* Col 2 - Quick Links */}
           <div className="md:col-span-3 lg:col-span-2 flex flex-col gap-4">
-            <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest mb-2">Explore</span>
+            <span className="text-[10px] font-bold text-zinc-600 uppercase tracking-widest mb-2">Explore</span>
             {navLinks.map(link => (
               <button 
                 key={link.id}
@@ -59,7 +59,7 @@ export default function Footer() {
 
           {/* Col 3 - Socials */}
           <div className="md:col-span-3 lg:col-span-2 flex flex-col gap-4 items-start">
-            <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest mb-2">Connect</span>
+            <span className="text-[10px] font-bold text-zinc-600 uppercase tracking-widest mb-2">Connect</span>
             {socials.map(social => (
               <Magnetic key={social.label}>
                 <a 
@@ -80,7 +80,7 @@ export default function Footer() {
 
         {/* Bottom Section - Copyright & Back to Top */}
         <div className="pt-8 border-t border-zinc-200 flex flex-col sm:flex-row justify-between items-center gap-6">
-          <p className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">
+          <p className="text-[10px] font-bold text-zinc-600 uppercase tracking-widest">
             © {new Date().getFullYear()} Hadeed Hussain Memon. All rights reserved.
           </p>
           

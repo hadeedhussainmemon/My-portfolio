@@ -83,7 +83,7 @@ export default function Header() {
                       data-id={tab.id}
                       type="button"
                       className={`inline-flex px-3.5 py-3 sm:px-5 sm:py-2.5 items-center justify-center transition-colors duration-200 text-[10px] font-bold uppercase tracking-widest flex-shrink-0 ${
-                        activeSection === tab.id ? 'text-zinc-900' : 'text-zinc-500 hover:text-zinc-900'
+                        activeSection === tab.id ? 'text-zinc-900' : 'text-zinc-600 hover:text-zinc-900'
                       }`}
                       aria-label={`Navigate to ${tab.label}`}
                       onClick={() => {

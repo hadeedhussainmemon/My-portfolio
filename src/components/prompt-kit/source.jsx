@@ -63,7 +63,7 @@ export function SourceContent({ title, description, isHovered, className }) {
           <div className="space-y-2">
             <h4 className="font-bold text-zinc-900 text-xs uppercase tracking-widest line-clamp-1">{title}</h4>
             {description && (
-              <p className="text-xs text-zinc-500 leading-relaxed font-medium line-clamp-3">
+              <p className="text-xs text-zinc-600 leading-relaxed font-medium line-clamp-3">
                 {description}
               </p>
             )}

@@ -39,7 +39,7 @@ export default function About({ isLoading }) {
               </p>
               
               <div className="pt-6 border-t border-zinc-200 mt-6">
-                <p className="text-xs text-zinc-500 font-medium leading-relaxed italic">
+                <p className="text-xs text-zinc-600 font-medium leading-relaxed italic">
                   Hadeed Hussain is a distinguished MERN Stack Developer, Agency Co-founder, and BS Data Science Student at the Virtual University of Pakistan.
                 </p>
               </div>

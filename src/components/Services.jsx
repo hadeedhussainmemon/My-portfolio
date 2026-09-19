@@ -64,7 +64,7 @@ export default function Services({ isLoading }) {
                     </h3>
                   </div>
                   <div className="md:col-span-4">
-                    <p className="text-xs text-zinc-500 font-medium leading-relaxed">
+                    <p className="text-xs text-zinc-600 font-medium leading-relaxed">
                       {service.description}
                     </p>
                   </div>
@@ -92,7 +92,7 @@ export default function Services({ isLoading }) {
                       <Search className="w-4 h-4 text-emerald-700" />
                       <h4 className="text-[10px] font-bold text-zinc-900 uppercase tracking-widest">Research</h4>
                     </div>
-                    <p className="text-xs text-zinc-500 font-medium leading-relaxed">
+                    <p className="text-xs text-zinc-600 font-medium leading-relaxed">
                       Analyze bottlenecks (e.g., N+1 query problems) and understand the full problem space before writing code.
                     </p>
                   </div>
@@ -103,7 +103,7 @@ export default function Services({ isLoading }) {
                       <Lightbulb className="w-4 h-4 text-emerald-700" />
                       <h4 className="text-[10px] font-bold text-zinc-900 uppercase tracking-widest">Analysis</h4>
                     </div>
-                    <p className="text-xs text-zinc-500 font-medium leading-relaxed">
+                    <p className="text-xs text-zinc-600 font-medium leading-relaxed">
                       Identify architectural improvements, evaluate tools, and design database structures optimized for scale.
                     </p>
                   </div>
@@ -114,7 +114,7 @@ export default function Services({ isLoading }) {
                       <Target className="w-4 h-4 text-emerald-700" />
                       <h4 className="text-[10px] font-bold text-zinc-900 uppercase tracking-widest">Execution</h4>
                     </div>
-                    <p className="text-xs text-zinc-500 font-medium leading-relaxed">
+                    <p className="text-xs text-zinc-600 font-medium leading-relaxed">
                       Implement robust, clean code (e.g., adding composite indexes or eager loading) ensuring maximum performance.
                     </p>
                   </div>
