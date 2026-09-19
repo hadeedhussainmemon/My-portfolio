@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Contact({ isLoading }) {
-  if (isLoading) return null;
+  
 
   return (
     <section id="contact" className="py-24 bg-zinc-100 border-t border-zinc-200">

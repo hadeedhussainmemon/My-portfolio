@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Testimonials({ isLoading }) {
-  if (isLoading) return null;
+  
 
   const testimonials = [
     {

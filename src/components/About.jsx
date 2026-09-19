@@ -3,7 +3,7 @@ import { Source, SourceContent, SourceTrigger } from './prompt-kit/source'
 import { motion } from 'framer-motion'
 
 export default function About({ isLoading }) {
-  if (isLoading) return null;
+  
 
   return (
     <section id="about" className="py-24 bg-white border-t border-zinc-200 overflow-hidden">

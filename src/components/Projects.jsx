@@ -5,7 +5,7 @@ import { Github, ExternalLink, X } from 'lucide-react'
 export default function Projects({ isLoading }){
   const [selectedProject, setSelectedProject] = useState(null);
 
-  if (isLoading) return null;
+  
 
   const displayProjects = [
     {
@@ -100,6 +100,8 @@ export default function Projects({ isLoading }){
                     <img 
                       src={project.image} 
                       alt={project.title} 
+                      width="800"
+                      height="450"
                       loading="lazy"
                       decoding="async"
                       className="w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 transform transition-all duration-700 group-hover:scale-105" 

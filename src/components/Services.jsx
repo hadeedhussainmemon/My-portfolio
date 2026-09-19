@@ -26,7 +26,7 @@ const services = [
 ]
 
 export default function Services({ isLoading }) {
-  if (isLoading) return null;
+  
 
   return (
     <section id="services" className="py-24 bg-white border-t border-zinc-200 overflow-hidden">

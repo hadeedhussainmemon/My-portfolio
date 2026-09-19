@@ -8,7 +8,7 @@ export default function Skills({ isLoading }) {
     threshold: 0.5,
   })
 
-  if (isLoading) return null;
+  
 
   return (
     <section id="skills" className="py-24 bg-zinc-50 border-t border-zinc-200">

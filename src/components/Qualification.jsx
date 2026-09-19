@@ -28,7 +28,7 @@ const qualifications = [
 ]
 
 export default function Qualification({ isLoading }) {
-  if (isLoading) return null;
+  
 
   return (
     <section id="qualification" className="py-24 bg-zinc-50 border-t border-zinc-200">

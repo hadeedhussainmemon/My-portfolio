@@ -2,10 +2,10 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 export default function Home({ isLoading }) {
-  if (isLoading) return null;
+  
 
   return (
-    <section id="home" className="min-h-[100dvh] flex flex-col justify-center pt-28 pb-12 sm:pt-32 relative overflow-hidden bg-white">
+    <section id="home" className="min-h-screen flex flex-col justify-center pt-28 pb-12 sm:pt-32 relative overflow-hidden bg-white">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 items-center">
           
