@@ -12,7 +12,7 @@ export default function Home({ isLoading }) {
           {/* Left Content - Massive Typography */}
           <div className="order-1 flex flex-col justify-center text-left space-y-6 sm:space-y-8 animate-fadeInUp mt-4 lg:mt-0">
             
-            <h1 className="font-display font-extrabold text-[70px] xs:text-[85px] sm:text-[140px] md:text-[160px] lg:text-[180px] xl:text-[200px] leading-[0.95] text-zinc-900 uppercase m-0 flex flex-col">
+            <h1 className="font-display text-[80px] xs:text-[100px] sm:text-[140px] md:text-[180px] lg:text-[200px] xl:text-[240px] leading-[0.85] text-zinc-900 uppercase m-0 tracking-normal flex flex-col">
               <span className="block">Hadeed</span>
               <span className="block">Hussain</span>
             </h1>
